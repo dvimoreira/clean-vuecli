@@ -7,7 +7,7 @@ export default [
       {
         path: 'dashboard',
         name: 'painel.dashboard',
-        component: () => import(/* webpackChunkName: "dashboard" */ './../views/Dashboard.vue'),
+        component: () => import(/* webpackChunkName: "dashboard" */ './../views/dashboard/Dashboard.vue'),
         meta: {
           auth: true
         }

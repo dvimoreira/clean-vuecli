@@ -2,20 +2,13 @@ export default [
   {
     path: '/',
     component: () => import(/* webpackChunkName: "tournament" */ './../layouts/Unauthenticated.vue'),
+    redirect: { name: 'auth.login' },
     meta: { auth: false },
     children: [
       {
-        path: '',
-        name: 'auth.login',
-        component: () => import(/* webpackChunkName: "tournament" */ './../views/Login.vue'),
-        meta: {
-          auth: false
-        }
-      },
-      {
         path: 'login',
         name: 'auth.login',
-        component: () => import(/* webpackChunkName: "tournament" */ './../views/Login.vue'),
+        component: () => import(/* webpackChunkName: "tournament" */ './../views/auth/Login.vue'),
         meta: {
           auth: false
         }
