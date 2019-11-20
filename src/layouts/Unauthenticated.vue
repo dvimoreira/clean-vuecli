@@ -45,7 +45,8 @@
         border-radius: 25px;
     }
 
-    .main-title { color: #000000; }
+    .login-title { color: #434343; }
+    .main-title { color: #434343; }
 
     .form {
         .input { background: #E5E4E4; }
@@ -66,12 +67,18 @@
     @media (min-width: 768px) {}
     @media (min-width: 992px) {}
     @media (min-width: 1200px) {
-        .custom-card { padding: 80px 40px; }
+        .custom-card { padding: 40px; }
+
+        .login-title {
+            font-size: 30px;
+            font-weight: 900;
+            margin: 0 0 30px 0;
+        }
 
         .main-title {
             font-size: 30px;
             font-weight: 900;
-            margin: 0 0 30px 0;
+            margin: 0;
         }
 
         .form {
@@ -86,12 +93,13 @@
 
         .button {
             border-radius: 50px;
-            width: 100%;
             height: 50px;
-            font-size: 20px;
-            font-weight: 700;
+            font-size: 18px;
+            font-weight: 500;
             -webkit-transition: all 0.3s;
             transition: all 0.3s;
+            padding: 0 30px;
+            &.full-btn { width: 100%; }
         }
     }
 </style>

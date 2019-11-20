@@ -16,15 +16,15 @@
                         <b-input type="password" v-model="form.password" password-reveal placeholder="Senha"></b-input>
                     </b-field>
 
-                    <b-button type="is-info">Login</b-button>
+                    <b-button type="is-info" class="full-btn">Login</b-button>
                 </div>
 
                 <div class="reset-password text-center">
-                    <a href="#">Esqueci minha senha</a>
+                    <router-link to="#">Esqueci minha senha</router-link>
                 </div>
 
                 <div class="create-account text-center">
-                    <a href="#">Criar uma conta <i class="icofont-long-arrow-right"></i></a>
+                    <router-link :to="{ name: 'auth.register.basic' }">Criar uma conta <i class="icofont-long-arrow-right"></i></router-link>
                 </div>
             </div>
         </div>
@@ -113,7 +113,7 @@
     }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
     .reset-password, .create-account {
         a {
             color: #918F8F;
