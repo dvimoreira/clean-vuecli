@@ -2,7 +2,7 @@
     <div>
         <div class="columns is-centered is-vcentered">
             <div class="column is-variable is-12-mobile is-12-tablet is-12-desktop is-12-widescreen is-12-fullhd">
-                <h1 class="main-title">Cadastro - <samp>Perfil</samp></h1>
+                <h1 class="main-title">Cadastro - <small>Dados do Perfil</small></h1>
             </div>
         </div>
 

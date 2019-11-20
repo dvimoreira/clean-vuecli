@@ -92,6 +92,11 @@
             font-size: 30px;
             font-weight: 900;
             margin: 0;
+            small {
+                font-size: 20px;
+                font-weight: 400;
+                opacity: 0.7;
+            }
         }
 
         .form {
