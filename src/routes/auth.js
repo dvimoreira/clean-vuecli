@@ -20,6 +20,14 @@ export default [
         meta: {
           auth: false
         }
+      },
+      {
+        path: 'register/profile',
+        name: 'auth.register.profile',
+        component: () => import(/* webpackChunkName: "register.profile" */ './../views/auth/register/step-02.vue'),
+        meta: {
+          auth: false
+        }
       }
     ]
   }

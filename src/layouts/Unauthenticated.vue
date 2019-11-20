@@ -4,7 +4,9 @@
             <div class="columns is-centered is-vcentered">
                 <div class="column is-variable is-12-mobile is-12-tablet is-10-desktop is-10-widescreen is-10-fullhd">
                     <div class="custom-card">
-                        <router-view></router-view>
+                        <transition name="slide-fade" mode="out-in">
+                            <router-view></router-view>
+                        </transition>
                     </div>
                 </div>
             </div>
@@ -61,6 +63,17 @@
                 background-color: #4656CE;
             }
         }
+    }
+
+    .slide-fade-enter-active {
+        transition: all .3s ease;
+    }
+    .slide-fade-leave-active {
+        transition: all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+    }
+    .slide-fade-enter, .slide-fade-leave-to {
+        transform: translateX(10px);
+        opacity: 0;
     }
 
     @media (min-width: 576px) {}
