@@ -24,11 +24,11 @@
 
 <style lang="scss">
     html {
-        background: rgb(199,80,192);
-        background: -moz-linear-gradient(55deg, rgba(199,80,192,1) 30%, rgba(67,87,207,1) 100%);
-        background: -webkit-linear-gradient(55deg, rgba(199,80,192,1) 30%, rgba(67,87,207,1) 100%);
-        background: linear-gradient(55deg, rgba(199,80,192,1) 30%, rgba(67,87,207,1) 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c750c0",endColorstr="#4357cf",GradientType=1);
+        background: #4656CE;
+        background: -moz-linear-gradient(55deg, #4656CE 30%, #B951C2 100%);
+        background: -webkit-linear-gradient(55deg, #4656CE 30%, #B951C2 100%);
+        background: linear-gradient(55deg, #4656CE 0%, #B951C2 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3F85ED",endColorstr="#B951C2",GradientType=1);
         display: grid;
         align-items: center;
         height: 100%;
@@ -74,6 +74,10 @@
     .slide-fade-enter, .slide-fade-leave-to {
         transform: translateX(10px);
         opacity: 0;
+    }
+
+    .tag:not(body).is-primary {
+        background-color: #B951C2;
     }
 
     @media (min-width: 576px) {}

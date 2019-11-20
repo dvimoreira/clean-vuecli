@@ -65,7 +65,7 @@
                 </div>
 
                 <div class="column is-variable is-12-mobile is-12-tablet is-12-desktop is-12-widescreen is-12-fullhd text-right">
-                    <b-button type="is-info" :disabled="!form.full_name || !form.dt_birth || !form.fixed_phone || !form.mobile_phone">Proximo <i class="icofont-long-arrow-right"></i></b-button>
+                    <b-button type="is-info" :disabled="!form.avatar || !form.full_name || !form.dt_birth || !form.fixed_phone || !form.mobile_phone">Proximo <i class="icofont-long-arrow-right"></i></b-button>
                 </div>
             </div>
         </div>
