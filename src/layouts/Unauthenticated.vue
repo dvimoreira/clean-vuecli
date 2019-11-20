@@ -80,7 +80,7 @@
     @media (min-width: 768px) {}
     @media (min-width: 992px) {}
     @media (min-width: 1200px) {
-        .custom-card { padding: 40px; }
+        .custom-card { padding: 30px; }
 
         .login-title {
             font-size: 30px;
@@ -103,7 +103,7 @@
             .input {
                 border: none;
                 border-radius: 50px;
-                height: 50px;
+                height: 40px;
                 padding: 0 15px;
                 &:focus { box-shadow: none; }
             }

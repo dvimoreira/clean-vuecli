@@ -16,7 +16,7 @@
                         <b-input type="password" v-model="form.password" password-reveal placeholder="Senha"></b-input>
                     </b-field>
 
-                    <b-button type="is-info" class="full-btn">Login</b-button>
+                    <b-button type="is-info" class="full-btn" :disabled="!form.email || !form.password">Login</b-button>
                 </div>
 
                 <div class="reset-password text-center">
