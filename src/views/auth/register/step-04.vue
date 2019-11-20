@@ -2,32 +2,18 @@
     <div>
         <div class="columns is-centered is-vcentered">
             <div class="column is-variable is-12-mobile is-12-tablet is-12-desktop is-12-widescreen is-12-fullhd">
-                <h1 class="main-title">Cadastro</h1>
+                <h1 class="main-title">Cadastro - <samp>Termos de uso</samp></h1>
             </div>
         </div>
 
         <div class="form">
             <div class="columns is-centered is-vcentered is-multiline">
                 <div class="column is-variable is-12-mobile is-12-tablet is-6-desktop is-6-widescreen is-6-fullhd">
-                    <b-field>
-                        <b-input type="text" v-model="form.name" placeholder="Nome Completo"></b-input>
-                    </b-field>
-                </div>
-
-                <div class="column is-variable is-12-mobile is-12-tablet is-6-desktop is-6-widescreen is-6-fullhd">
-                    <b-field>
-                        <b-input type="email" v-model="form.email" placeholder="E-mail"></b-input>
-                    </b-field>
-                </div>
-
-                <div class="column is-variable is-12-mobile is-12-tablet is-12-desktop is-12-widescreen is-12-fullhd">
-                    <b-field>
-                        <b-input type="password" v-model="form.password" password-reveal placeholder="Senha"></b-input>
-                    </b-field>
+                    <p>Aqui vai o termo de uso.</p>
                 </div>
 
                 <div class="column is-variable is-12-mobile is-12-tablet is-12-desktop is-12-widescreen is-12-fullhd text-right">
-                    <b-button type="is-info">Proximo <i class="icofont-long-arrow-right"></i></b-button>
+                    <b-button type="is-info">Finalizar <i class="icofont-check-alt"></i></b-button>
                 </div>
             </div>
         </div>

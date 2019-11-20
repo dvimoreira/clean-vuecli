@@ -28,6 +28,30 @@ export default [
         meta: {
           auth: false
         }
+      },
+      {
+        path: 'register/company',
+        name: 'auth.register.company',
+        component: () => import(/* webpackChunkName: "register.company" */ './../views/auth/register/step-03.vue'),
+        meta: {
+          auth: false
+        }
+      },
+      {
+        path: 'register/term-of-use',
+        name: 'auth.register.terms',
+        component: () => import(/* webpackChunkName: "register.terms" */ './../views/auth/register/step-04.vue'),
+        meta: {
+          auth: false
+        }
+      },
+      {
+        path: 'register/finished',
+        name: 'auth.register.finished',
+        component: () => import(/* webpackChunkName: "register.finished" */ './../views/auth/register/finished.vue'),
+        meta: {
+          auth: false
+        }
       }
     ]
   }
