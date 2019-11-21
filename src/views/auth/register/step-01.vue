@@ -2,26 +2,79 @@
     <div>
         <div class="columns is-centered is-vcentered">
             <div class="column is-variable is-12-mobile is-12-tablet is-12-desktop is-12-widescreen is-12-fullhd">
-                <h1 class="main-title">Cadastro</h1>
+                <h1 class="main-title">Cadastro <small>Selecione um plano</small></h1>
             </div>
         </div>
 
-        <div class="form">
-            <div class="columns is-centered is-vcentered is-multiline">
-                <div class="column is-variable is-12-mobile is-12-tablet is-6-desktop is-6-widescreen is-6-fullhd">
-                    <b-field>
-                        <b-input type="email" v-model="form.email" placeholder="E-mail"></b-input>
-                    </b-field>
+        <div class="plans-list">
+            <div class="columns is-centered is-vcentered">
+                <div class="column">
+                    <div class="plan-item">
+                        <div class="plan-header">
+                            <h2>Básico</h2>
+                            <span>R$ 59,90</span>
+                        </div>
+
+                        <div class="plan-content">
+                            <ul>
+                                <li>1 Usuário</li>
+                                <li>Lembretes de horários SMS/E-mail</li>
+                                <li>Programa de Fidelidade</li>
+                                <li>Relatórios</li>
+                                <li>Gestão Financeira</li>
+                            </ul>
+                        </div>
+
+                        <div class="plan-footer">
+                            <b-button type="is-info">Selecionar</b-button>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="column is-variable is-12-mobile is-12-tablet is-6-desktop is-6-widescreen is-6-fullhd">
-                    <b-field>
-                        <b-input type="password" v-model="form.password" password-reveal placeholder="Senha"></b-input>
-                    </b-field>
+                <div class="column">
+                    <div class="plan-item">
+                        <div class="plan-header">
+                            <h2>Plus</h2>
+                            <span>R$ 99,90</span>
+                        </div>
+
+                        <div class="plan-content">
+                            <ul>
+                                <li>2 à 7 Usuários</li>
+                                <li>Lembretes de horários SMS/E-mail</li>
+                                <li>Programa de Fidelidade</li>
+                                <li>Relatórios</li>
+                                <li>Gestão Financeira</li>
+                            </ul>
+                        </div>
+
+                        <div class="plan-footer">
+                            <b-button type="is-info">Selecionar</b-button>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="column is-variable is-12-mobile is-12-tablet is-12-desktop is-12-widescreen is-12-fullhd text-right">
-                    <b-button type="is-info" :disabled="!form.email || !form.password">Proximo <i class="icofont-long-arrow-right"></i></b-button>
+                <div class="column">
+                    <div class="plan-item">
+                        <div class="plan-header">
+                            <h2>Vip</h2>
+                            <span>R$ 179,90</span>
+                        </div>
+
+                        <div class="plan-content">
+                            <ul>
+                                <li>+ de 8 Usuários</li>
+                                <li>Lembretes de horários SMS/E-mail</li>
+                                <li>Programa de Fidelidade</li>
+                                <li>Relatórios</li>
+                                <li>Gestão Financeira</li>
+                            </ul>
+                        </div>
+
+                        <div class="plan-footer">
+                            <b-button type="is-info">Selecionar</b-button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -42,8 +95,67 @@
 </script>
 
 <style lang="scss" scoped>
+    .plans-list {
+        .plan-item {
+            .plan-header {
+                background: #4656CE;
+                background: -moz-linear-gradient(55deg, #4656CE 30%, #B951C2 100%);
+                background: -webkit-linear-gradient(55deg, #4656CE 30%, #B951C2 100%);
+                background: linear-gradient(55deg, #4656CE 0%, #B951C2 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3F85ED",endColorstr="#B951C2",GradientType=1);
+                h2, span { color: #FFFFFF; }
+            }
+        }
+    }
+
     @media (min-width: 576px) {}
     @media (min-width: 768px) {}
     @media (min-width: 992px) {}
-    @media (min-width: 1200px) {}
+    @media (min-width: 1200px) {
+        .plans-list {
+            .plan-item {
+                .plan-header {
+                    text-align: center;
+                    border-radius: 20px 20px 0 0;
+                    padding: 10px 0;
+                    h2 {
+                        font-size: 30px;
+                        font-weight: 900;
+                        margin: 0;
+                        text-transform: uppercase;
+                    }
+                    span {
+                        font-size: 25px;
+                        font-weight: 300;
+                        margin: 0;
+                    }
+                }
+                .plan-content {
+                    padding: 15px;
+                    background: #f7f7f7;
+                    border-radius: 0 0 20px 20px;
+                    ul {
+                        padding: 0;
+                        margin: 0;
+                        text-align: center;
+                        li {
+                            display: block;
+                            list-style: none;
+                            border-bottom: 1px solid rgba(202, 202, 202, 0.466);
+                            padding: 10px 0;
+                            font-size: 14px;
+                            &:last-child {
+                                padding-bottom: 0;
+                                border: none;
+                            }
+                        }
+                    }
+                }
+                .plan-footer {
+                    text-align: center;
+                    padding: 15px;
+                }
+            }
+        }
+    }
 </style>

@@ -2,7 +2,7 @@
     <div>
         <div class="columns is-centered is-vcentered">
             <div class="column is-variable is-12-mobile is-12-tablet is-12-desktop is-12-widescreen is-12-fullhd">
-                <h1 class="main-title">Cadastro <small>Selecione um plano</small></h1>
+                <h1 class="main-title">Cadastro</h1>
             </div>
         </div>
 
