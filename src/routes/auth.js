@@ -14,9 +14,17 @@ export default [
         }
       },
       {
+        path: 'register/plan',
+        name: 'auth.register.plan',
+        component: () => import(/* webpackChunkName: "register.plan" */ './../views/auth/register/step-01.vue'),
+        meta: {
+          auth: false
+        }
+      },
+      {
         path: 'register/basic',
         name: 'auth.register.basic',
-        component: () => import(/* webpackChunkName: "register.basic" */ './../views/auth/register/step-01.vue'),
+        component: () => import(/* webpackChunkName: "register.basic" */ './../views/auth/register/step-02.vue'),
         meta: {
           auth: false
         }
@@ -24,7 +32,7 @@ export default [
       {
         path: 'register/profile',
         name: 'auth.register.profile',
-        component: () => import(/* webpackChunkName: "register.profile" */ './../views/auth/register/step-02.vue'),
+        component: () => import(/* webpackChunkName: "register.profile" */ './../views/auth/register/step-03.vue'),
         meta: {
           auth: false
         }
@@ -32,7 +40,7 @@ export default [
       {
         path: 'register/company',
         name: 'auth.register.company',
-        component: () => import(/* webpackChunkName: "register.company" */ './../views/auth/register/step-03.vue'),
+        component: () => import(/* webpackChunkName: "register.company" */ './../views/auth/register/step-04.vue'),
         meta: {
           auth: false
         }
@@ -40,7 +48,7 @@ export default [
       {
         path: 'register/term-of-use',
         name: 'auth.register.terms',
-        component: () => import(/* webpackChunkName: "register.terms" */ './../views/auth/register/step-04.vue'),
+        component: () => import(/* webpackChunkName: "register.terms" */ './../views/auth/register/step-05.vue'),
         meta: {
           auth: false
         }
