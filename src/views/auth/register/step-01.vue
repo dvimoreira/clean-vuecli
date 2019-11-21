@@ -45,6 +45,10 @@
                                 <li>Programa de Fidelidade</li>
                                 <li>Relatórios</li>
                                 <li>Gestão Financeira</li>
+                                <li>Pesquisa de Satisfação</li>
+                                <li>Gestão de Estoque</li>
+                                <li>Gestão de Profissionais</li>
+                                <li>Aniversáriantes</li>
                             </ul>
                         </div>
 
