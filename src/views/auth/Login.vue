@@ -6,7 +6,7 @@
             </div>
             <div class="column is-variable is-12-mobile is-12-tablet is-5-desktop is-offset-1-desktop is-5-widescreen is-offset-1-widescreen is-5-fullhd is-offset-1-fullhd">
                 <div class="text-center">
-                    <h1 class="main-title">Painel de Acesso</h1>
+                    <h1 class="main-title">Painel do Entregador</h1>
                 </div>
 
                 <div class="form text-center">
