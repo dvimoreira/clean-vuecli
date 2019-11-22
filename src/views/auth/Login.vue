@@ -1,8 +1,10 @@
 <template>
-    <div>
+    <div id="page-login">
         <div class="columns is-centered is-vcentered">
-            <div class="column is-variable is-12-mobile is-12-tablet is-7-desktop is-7-widescreen is-7-fullhd"></div>
-            <div class="column is-variable is-12-mobile is-12-tablet is-5-desktop is-5-widescreen is-5-fullhd">
+            <div class="column is-variable is-12-mobile is-12-tablet is-6-desktop is-6-widescreen is-6-fullhd">
+                <img src="/img/user-box.png">
+            </div>
+            <div class="column is-variable is-12-mobile is-12-tablet is-5-desktop is-offset-1-desktop is-5-widescreen is-offset-1-widescreen is-5-fullhd is-offset-1-fullhd">
                 <div class="text-center">
                     <h1 class="main-title">Painel de Acesso</h1>
                 </div>
@@ -129,6 +131,10 @@
     @media (min-width: 768px) {}
     @media (min-width: 992px) {}
     @media (min-width: 1200px) {
+        #page-login {
+            h1.main-title { margin-bottom: 60px; }
+        }
+
         .reset-password {
             a {
                 display: block;

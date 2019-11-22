@@ -1,32 +1,65 @@
 <template>
     <div>
-        <div class="columns is-centered is-vcentered">
+        <div class="columns is-centered is-vcentered is-multiline">
             <div class="column is-variable is-12-mobile is-12-tablet is-12-desktop is-12-widescreen is-12-fullhd">
-                <h1 class="main-title">Cadastro - <small>Termos de uso</small></h1>
+                <h1 class="main-title">Cadastro - <small>Cadastro de veículos</small></h1>
             </div>
         </div>
 
-        <div class="form">
-            <div class="columns is-centered is-vcentered is-multiline">
-                <div class="column is-variable is-12-mobile is-12-tablet is-12-desktop is-12-widescreen is-12-fullhd">
-                    <div id="term-of-use">
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                        <h2>Lorem Ipsum is simply</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                    </div>
+        <div class="columns is-centered is-vcentered">
+            <div class="column is-variable is-12-mobile is-12-tablet is-3-desktop is-3-widescreen is-3-fullhd">
+                <div class="radio-box">
+                    <b-field>
+                        <b-radio-button v-model="form.radio" native-value="bike" class="big-radio">
+                            <img src="/img/bicycle.png">
+                            <p>Bicicleta</p>
+                        </b-radio-button>
+                    </b-field>
                 </div>
+            </div>
 
-                <div class="column is-variable is-12-mobile is-12-tablet is-6-desktop is-6-widescreen is-6-fullhd text-left">
-                    <div class="field">
-                        <b-checkbox v-model="form.checkbox">Aceito os termos de uso.</b-checkbox>
-                    </div>
+            <div class="column is-variable is-12-mobile is-12-tablet is-3-desktop is-3-widescreen is-3-fullhd">
+                <div class="radio-box">
+                    <b-field>
+                        <b-radio-button v-model="form.radio" native-value="moto" class="big-radio">
+                            <img src="/img/scooter.png">
+                            <p>Moto</p>
+                        </b-radio-button>
+                    </b-field>
                 </div>
+            </div>
 
-                <div class="column is-variable is-12-mobile is-12-tablet is-6-desktop is-6-widescreen is-6-fullhd text-right">
-                    <b-button type="is-info" :disabled="!form.checkbox">Finalizar <i class="icofont-check-alt"></i></b-button>
+            <div class="column is-variable is-12-mobile is-12-tablet is-3-desktop is-3-widescreen is-3-fullhd">
+                <div class="radio-box">
+                    <b-field>
+                        <b-radio-button v-model="form.radio" native-value="carro" class="big-radio">
+                            <img src="/img/car.png">
+                            <p>Carro</p>
+                        </b-radio-button>
+                    </b-field>
                 </div>
+            </div>
+
+            <div class="column is-variable is-12-mobile is-12-tablet is-3-desktop is-3-widescreen is-3-fullhd">
+                <div class="radio-box">
+                    <b-field>
+                        <b-radio-button v-model="form.radio" native-value="caminhao" class="big-radio">
+                            <img src="/img/truck.png">
+                            <p>Caminhão</p>
+                        </b-radio-button>
+                    </b-field>
+                </div>
+            </div>
+        </div>
+
+        <div class="columns is-centered is-vcentered is-multiline">
+            <div class="column is-variable is-12-mobile is-12-tablet is-8-desktop is-8-widescreen is-8-fullhd small-alert">
+                <p>* Selecione o meio de locomoção que utilizará para as entregas.<br>
+                Não se preocupe, você poderá escolher outro depois.</p>
+            </div>
+
+            <div class="column is-variable is-12-mobile is-12-tablet is-4-desktop is-4-widescreen is-4-fullhd text-right">
+                <b-button type="is-info" :disabled="!form.radio">Proximo <i class="icofont-long-arrow-right"></i></b-button>
             </div>
         </div>
     </div>
@@ -46,29 +79,56 @@
 </script>
 
 <style lang="scss">
-    #term-of-use {
-        width: 100%;
-        overflow-y: scroll;
-        background: #F5F5F5;
-        padding: 15px;
-        color: #434343;
+    .radio-box {
+        .big-radio {
+            .radio {
+                &.button {
+                    height: inherit;
+                    display: block;
+                    border: 2px dashed rgba(181, 181, 181, 0.623);
+                    border-radius: 5px;
+                    img {
+                        max-width: 100px;
+                        margin: 0 auto 10px;
+                        display: block;
+                    }
+                    p {
+                        display: block;
+                        text-transform: initial;
+                    }
+                }
+                &.is-primary {
+                    background: #8454C8;
+                    border: none;
+                }
+                &.is-focused {
+                    img { filter: invert(100%); }
+                }
+            }
+        }
+    }
+
+    .small-alert {
+        p {
+            margin: 0;
+            font-size: 14px;
+            font-weight: 400;
+            color: #AFAFAF;
+        }
     }
 
     @media (min-width: 576px) {}
     @media (min-width: 768px) {}
     @media (min-width: 992px) {}
     @media (min-width: 1200px) {
-        #term-of-use {
-            max-height: 300px;
-            h1, h2, h3, h4, h5, h6 {
-                font-size: 20px;
-                font-weight: 700;
-                margin: 0 0 20px 0;
-            }
-            p {
-                font-size: 15px;
-                font-weight: 400;
-                margin: 0 0 15px 0;
+        .radio-box {
+            margin-bottom: 30px;
+            .big-radio {
+                .radio {
+                    &.button {
+                        padding: 20px;
+                    }
+                }
             }
         }
     }

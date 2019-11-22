@@ -84,7 +84,7 @@
     @media (min-width: 768px) {}
     @media (min-width: 992px) {}
     @media (min-width: 1200px) {
-        .custom-card { padding: 30px; }
+        .custom-card { padding: 30px 45px; }
 
         .login-title {
             font-size: 30px;

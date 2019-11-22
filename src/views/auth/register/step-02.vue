@@ -2,26 +2,70 @@
     <div>
         <div class="columns is-centered is-vcentered">
             <div class="column is-variable is-12-mobile is-12-tablet is-12-desktop is-12-widescreen is-12-fullhd">
-                <h1 class="main-title">Cadastro</h1>
+                <h1 class="main-title">Cadastro - <small>Dados do Perfil</small></h1>
             </div>
         </div>
 
         <div class="form">
             <div class="columns is-centered is-vcentered is-multiline">
+                <div class="column is-variable is-12-mobile is-12-tablet is-12-desktop is-12-widescreen is-12-fullhd">
+                    <div class="upload-box">
+                        <b-field>
+                            <b-upload v-model="form.avatar"
+                                multiple
+                                drag-drop>
+                                <section class="section">
+                                    <div class="content has-text-centered">
+                                        <p>
+                                            <img src="/img/user.png">
+                                        </p>
+                                        <p>Imagem de Perfil</p>
+                                        <p><span>(Clique aqui ou arraste)</span></p>
+                                    </div>
+                                </section>
+                            </b-upload>
+                        </b-field>
+
+                        <div class="tags">
+                            <span v-for="(file, index) in form.avatar"
+                                :key="index"
+                                class="tag is-primary" >
+                                {{file.name}}
+                                <button class="delete is-small"
+                                    type="button"
+                                    @click="deleteDropFile(index)">
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="column is-variable is-12-mobile is-12-tablet is-6-desktop is-6-widescreen is-6-fullhd">
                     <b-field>
-                        <b-input type="email" v-model="form.email" placeholder="E-mail"></b-input>
+                        <b-input type="text" v-model="form.cpf_cnpj" placeholder="CPF ou CNPJ"></b-input>
                     </b-field>
                 </div>
 
                 <div class="column is-variable is-12-mobile is-12-tablet is-6-desktop is-6-widescreen is-6-fullhd">
                     <b-field>
-                        <b-input type="password" v-model="form.password" password-reveal placeholder="Senha"></b-input>
+                        <b-input type="text" v-model="form.mobile_phone" placeholder="Celular"></b-input>
+                    </b-field>
+                </div>
+
+                <div class="column is-variable is-12-mobile is-12-tablet is-6-desktop is-6-widescreen is-6-fullhd">
+                    <b-field>
+                        <b-input type="text" v-model="form.mother_name" placeholder="Nome completo da mãe"></b-input>
+                    </b-field>
+                </div>
+
+                <div class="column is-variable is-12-mobile is-12-tablet is-6-desktop is-6-widescreen is-6-fullhd">
+                    <b-field>
+                        <b-input type="text" v-model="form.dt_birth" placeholder="Data de nascimento"></b-input>
                     </b-field>
                 </div>
 
                 <div class="column is-variable is-12-mobile is-12-tablet is-12-desktop is-12-widescreen is-12-fullhd text-right">
-                    <b-button type="is-info" :disabled="!form.email || !form.password">Proximo <i class="icofont-long-arrow-right"></i></b-button>
+                    <b-button type="is-info" :disabled="!form.avatar || !form.cpf_cnpj || !form.mobile_phone || !form.mother_name || !form.dt_birth">Proximo <i class="icofont-long-arrow-right"></i></b-button>
                 </div>
             </div>
         </div>
@@ -37,11 +81,42 @@
                 form: {}
             }
         },
-        methods: {}
+        methods: {
+            deleteDropFile (index) {
+                this.form.avatar.splice(index, 1)
+            }
+        }
     }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
+    .upload-box {
+        .upload {
+            width: 100%;
+            img {
+                max-width: 100px;
+                margin: 0 auto;
+            }
+            .upload-draggable {
+                width: 100%;
+                border: 2px dashed rgba(181, 181, 181, 0.623);
+                border-radius: 5px;
+                .section {
+                    padding: 10px 0;
+                    .content {
+                        p {
+                            font-size: 15px;
+                            font-weight: 400;
+                            margin: 5px 0;
+                            color: #434343;
+                            span { color: #B951C2; }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     @media (min-width: 576px) {}
     @media (min-width: 768px) {}
     @media (min-width: 992px) {}
